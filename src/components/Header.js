@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { selectCars } from "../features/car/Carslice";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
+  const car = useSelector(selectCars);
   return (
     <Container>
       <a>
@@ -13,6 +16,12 @@ function Header() {
       </a>
 
       <Menu>
+        {car &&
+          car.map((cars, index) => {
+            <a key={index} href="">
+              {car}
+            </a>;
+          })}
         <a href=""> Model S</a>
         <a href=""> Model 3</a>
         <a href=""> Model X</a>
@@ -28,6 +37,12 @@ function Header() {
         <CloseWrapper>
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
+        {car &&
+          car.map((cars, index) => {
+            <li key={index} href="">
+              {car}
+            </li>;
+          })}
         <li>
           <a href="#">Existing Inventory</a>
         </li>
@@ -39,15 +54,6 @@ function Header() {
         </li>
         <li>
           <a href="#">Roadster</a>
-        </li>
-        <li>
-          <a href="#">Existing Inventory</a>
-        </li>
-        <li>
-          <a href="#">Existing Inventory</a>
-        </li>
-        <li>
-          <a href="#">Existing Inventory</a>
         </li>
       </BurgerNav>
     </Container>
@@ -117,6 +123,8 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.5s ease-in-out;
+
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
