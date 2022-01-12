@@ -29,9 +29,29 @@ function Home() {
       <Section
         title="Model X"
         descrpition="Order Online for Touchless Delivery"
-        backgroundImg="model-X.jpg"
+        backgroundImg="model-x.jpg"
         leftBtnText="Custom Order"
         rightBtnText="Existing Inventory"
+      />
+      <Section
+        title="Lowest Cost Solar Panels in America"
+        descrpition="Money-back guarantee"
+        backgroundImg="solar-panel.jpg"
+        leftBtnText="Order Now"
+        rightBtnText="Learn More"
+      />
+      <Section
+        title="Solar for new Roofs "
+        descrpition="Solar Roof Cost Less  than a New Roof Plus Solar Panels"
+        backgroundImg="solar-roof.jpg"
+        leftBtnText="Shop Now"
+        rightBtnText="Learn More"
+      />
+      <Section
+        title="Accessories"
+        descrpition=""
+        backgroundImg="accessories.jpg"
+        leftBtnText="Order Now"
       />
     </Container>
   );
@@ -41,4 +61,5 @@ export default Home;
 
 const Container = styled.div`
   height: 100vh;
+  z-index: 10;
 `;
