@@ -7,8 +7,9 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
+  const cars = useSelector(selectCars);
+  console.log(cars);
 
-  const car = useSelector(selectCars);
   return (
     <Container>
       <a>
@@ -16,12 +17,6 @@ function Header() {
       </a>
 
       <Menu>
-        {car &&
-          car.map((cars, index) => {
-            <a key={index} href="">
-              {car}
-            </a>;
-          })}
         <a href=""> Model S</a>
         <a href=""> Model 3</a>
         <a href=""> Model X</a>
@@ -37,12 +32,18 @@ function Header() {
         <CloseWrapper>
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
-        {car &&
-          car.map((cars, index) => {
-            <li key={index} href="">
-              {car}
-            </li>;
-          })}
+        <li>
+          <a href=""> Model S</a>
+        </li>
+        <li>
+          <a href=""> Model 3</a>
+        </li>
+        <li>
+          <a href=""> Model X</a>
+        </li>
+        <li>
+          <a href=""> Model Y</a>
+        </li>
         <li>
           <a href="#">Existing Inventory</a>
         </li>
