@@ -1,1 +1,1 @@
-<img src="./Tesla-HeroSection.JPG">
+<img src="public/Tesla-HeroSection.JPG">
