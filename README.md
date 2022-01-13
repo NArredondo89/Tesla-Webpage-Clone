@@ -1,2 +1,1 @@
-
-! [page] (./Tesla-HeroSection.jpg)
+<img src="./Tesla-HeroSection.JPG">
