@@ -1,1 +1,1 @@
-<img src="public/Tesla-HeroSection.JPG">
+![alt text](http://Tesla-HeroSection.JPG)
