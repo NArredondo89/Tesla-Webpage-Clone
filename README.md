@@ -1,1 +1,1 @@
-![alt text](http://Tesla-HeroSection.JPG)
+![alt text](http://images/Tesla-HeroSection.JPG)
